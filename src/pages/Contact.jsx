@@ -58,7 +58,7 @@ function Contact() {
               Phone
             </h4>
             <p className="text-gray-500">
-              +91 98765 43210
+             
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ function Contact() {
               Email
             </h4>
             <p className="text-gray-500">
-              support@eldercare.com
+              
             </p>
           </div>
         </div>
@@ -90,8 +90,8 @@ function Contact() {
               Address
             </h4>
             <p className="text-gray-500">
-              123 Wellness Street,<br />
-              Mumbai, Maharashtra, India
+              <br />
+              
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ function Contact() {
               Support Hours
             </h4>
             <p className="text-gray-500">
-              24×7 — We're Always Available
+              
             </p>
           </div>
         </div>
