@@ -51,5 +51,5 @@ export const recentActivity = [
   { id: 1, text: 'New citizen registration — Priya Sharma', time: '2 hours ago', color: 'purple' },
   { id: 2, text: 'Booking confirmed — Ramesh Kumar with caretaker Anjali Nair', time: '5 hours ago', color: 'orange' },
   { id: 3, text: 'Caretaker application submitted — Suresh Iyer', time: '1 day ago', color: 'blue' },
-  { id: 4, text: 'Payment received — ₹22,999 (Gold Plan)', time: '1 day ago', color: 'green' },
+  { id: 4, text: 'Payment received — (Gold Plan)', time: '1 day ago', color: 'green' },
 ]
