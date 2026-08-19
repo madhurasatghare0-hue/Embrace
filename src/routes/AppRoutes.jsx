@@ -9,6 +9,8 @@
 // import Contact from '../pages/Contact'
 // import Login from '../pages/Login'
 // import CitizenRegister from '../pages/citizen/Register'
+// import CitizenSelectPlan from '../pages/citizen/SelectPlan'
+// import CitizenDashboard from '../pages/citizen/Dashboard'
 // import CaretakerRegister from '../pages/caretaker/Register'
 // import AdminLayout from '../layouts/AdminLayout'
 // import AdminDashboard from '../pages/admin/Dashboard'
@@ -33,14 +35,21 @@
 //     path: '/login',
 //     element: <Login />,
 //   },
-
 //   {
-//   path: '/admin',
-//   element: <AdminLayout />,
-//   children: [
-//     { index: true, element: <AdminDashboard /> },
-//   ],
-// },
+//     path: '/citizen/select-plan',
+//     element: <CitizenSelectPlan />,
+//   },
+//   {
+//     path: '/citizen/dashboard',
+//     element: <CitizenDashboard />,
+//   },
+//   {
+//     path: '/admin',
+//     element: <AdminLayout />,
+//     children: [
+//       { index: true, element: <AdminDashboard /> },
+//     ],
+//   },
 // ])
 
 // export default router
@@ -57,8 +66,71 @@
 
 
 
+
+// import { createBrowserRouter } from 'react-router-dom'
+// import PublicLayout from '../layouts/PublicLayout'
+// import Home from '../pages/Home'
+// import About from '../pages/About'
+// import Services from '../pages/Services'
+// import CarePackages from '../pages/CarePackages'
+// import HowItWorksPage from '../pages/HowItWorks'
+// import Blog from '../pages/Blog'
+// import Contact from '../pages/Contact'
+// import Login from '../pages/Login'
+// import CitizenRegister from '../pages/citizen/Register'
+// import CitizenSelectPlan from '../pages/citizen/SelectPlan'
+// import CitizenDashboard from '../pages/citizen/Dashboard'
+// import CaretakerRegister from '../pages/caretaker/Register'
+// import AdminLayout from '../layouts/AdminLayout'
+// import AdminDashboard from '../pages/admin/Dashboard'
+// import Approvals from '../pages/admin/Approvals'
+// import CaretakerDashboard from '../pages/caretaker/Dashboard'
+// import CaretakerChat from '../pages/caretaker/Chat'
+
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <PublicLayout />,
+//     children: [
+//       { index: true, element: <Home /> },
+//       { path: 'about', element: <About /> },
+//       { path: 'services', element: <Services /> },
+//       { path: 'care-packages', element: <CarePackages /> },
+//       { path: 'how-it-works', element: <HowItWorksPage /> },
+//       { path: 'blog', element: <Blog /> },
+//       { path: 'contact', element: <Contact /> },
+//     ],
+//   },
+//   { path: '/login', element: <Login /> },
+//   { path: '/register/citizen', element: <CitizenRegister /> },
+//   { path: '/register/caretaker', element: <CaretakerRegister /> },
+//   { path: '/citizen/select-plan', element: <CitizenSelectPlan /> },
+//   { path: '/citizen/dashboard', element: <CitizenDashboard /> },
+//   {
+//     path: '/admin',
+//     element: <AdminLayout />,
+//     children: [{ index: true, element: <AdminDashboard /> },
+//        { path: 'approvals', element: <Approvals /> },
+//     ],
+//   },
+//   { path: '/caretaker/dashboard', element: <CaretakerDashboard /> },
+// { path: '/caretaker/chat/:citizenId', element: <CaretakerChat /> },
+// ])
+
+// export default router
+
+
+
+
+
+
+
+
+
 import { createBrowserRouter } from 'react-router-dom'
+
 import PublicLayout from '../layouts/PublicLayout'
+
 import Home from '../pages/Home'
 import About from '../pages/About'
 import Services from '../pages/Services'
@@ -66,12 +138,18 @@ import CarePackages from '../pages/CarePackages'
 import HowItWorksPage from '../pages/HowItWorks'
 import Blog from '../pages/Blog'
 import Contact from '../pages/Contact'
+
 import Login from '../pages/Login'
+
 import CitizenRegister from '../pages/citizen/Register'
 import CitizenSelectPlan from '../pages/citizen/SelectPlan'
 import CitizenDashboard from '../pages/citizen/Dashboard'
+import Payment from '../pages/citizen/Payment'
+
 import CaretakerRegister from '../pages/caretaker/Register'
-import AdminLayout from '../layouts/AdminLayout'
+import CaretakerDashboard from '../pages/caretaker/Dashboard'
+import CaretakerChat from '../pages/caretaker/Chat'
+
 import AdminDashboard from '../pages/admin/Dashboard'
 
 const router = createBrowserRouter([
@@ -86,13 +164,19 @@ const router = createBrowserRouter([
       { path: 'how-it-works', element: <HowItWorksPage /> },
       { path: 'blog', element: <Blog /> },
       { path: 'contact', element: <Contact /> },
-      { path: 'register/citizen', element: <CitizenRegister /> },
-      { path: 'register/caretaker', element: <CaretakerRegister /> },
     ],
   },
+
+  // Authentication
   {
     path: '/login',
     element: <Login />,
+  },
+
+  // Citizen
+  {
+    path: '/register/citizen',
+    element: <CitizenRegister />,
   },
   {
     path: '/citizen/select-plan',
@@ -102,13 +186,31 @@ const router = createBrowserRouter([
     path: '/citizen/dashboard',
     element: <CitizenDashboard />,
   },
+  { path: '/citizen/payment', element: <Payment /> },
+
+  // Admin
   {
     path: '/admin',
-    element: <AdminLayout />,
-    children: [
-      { index: true, element: <AdminDashboard /> },
-    ],
+    element: <AdminDashboard />,
+  },
+
+  // Caretaker
+  {
+    path: '/register/caretaker',
+    element: <CaretakerRegister />,
+  },
+  {
+    path: '/caretaker/dashboard',
+    element: <CaretakerDashboard />,
+  },
+  {
+    path: '/caretaker/chat/:citizenId',
+    element: <CaretakerChat />,
   },
 ])
 
 export default router
+
+
+
+

@@ -1,46 +1,52 @@
-import { Award, Star, Crown } from 'lucide-react'
+import { ShieldCheck, Award, Crown } from 'lucide-react'
 
-// maxHouses = how many households a single caretaker on this plan is
-// responsible for. Lower number = more dedicated attention.
 const plans = [
   {
     id: 'silver',
     name: 'Silver Plan',
-    tagline: 'Reliable, well-rounded everyday care',
-    icon: Award,
+    tagline: 'Shared caretaker support for everyday needs.',
+    icon: ShieldCheck,
     maxHouses: 5,
-    caretakersAssigned: 1,
+    price: 2499,
+    isPremium: false,
+    highlighted: false,
     features: [
-      'Caretaker shared across up to 5 households',
-      '1 dedicated caretaker assigned to you',
-      'Access to all 10 service categories',
+      '1 Caretaker assigned',
+      'Shared across up to 5 households',
+      'Access to all request categories',
+      'Community group chat',
     ],
   },
   {
     id: 'gold',
     name: 'Gold Plan',
-    tagline: 'More attention, faster response',
-    icon: Star,
+    tagline: 'More attention, faster response times.',
+    icon: Award,
     maxHouses: 3,
-    caretakersAssigned: 1,
+    price: 3499,
+    isPremium: true,
     highlighted: true,
     features: [
-      'Caretaker shared across up to 3 households',
-      '1 dedicated caretaker assigned to you',
-      'Access to all 10 service categories',
+      '1 Caretaker assigned',
+      'Shared across up to 3 households',
+      'Priority request handling',
+      'Private + group chat access',
     ],
   },
   {
     id: 'platinum',
     name: 'Platinum Plan',
-    tagline: 'A caretaker focused on you alone',
+    tagline: 'A caretaker dedicated to your household alone.',
     icon: Crown,
     maxHouses: 1,
-    caretakersAssigned: 1,
+    price: 4999,
+    isPremium: true,
+    highlighted: false,
     features: [
-      'Caretaker assigned to your household only',
-      '1 dedicated caretaker assigned to you',
-      'Access to all 10 service categories',
+      '1 dedicated Caretaker',
+      'Just 1 household per caretaker',
+      'Fastest response priority',
+      'Private chat + emergency line',
     ],
   },
 ]

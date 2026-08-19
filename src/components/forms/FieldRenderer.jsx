@@ -134,6 +134,20 @@ function FieldRenderer({ field, value, onChange }) {
           })}
         </div>
       )}
+
+      {type === 'file' && (
+  <label className="flex flex-col items-center justify-center gap-2 border-2 border-dashed border-gray-200 rounded-lg py-6 cursor-pointer hover:border-[#6B3FA0]/40 transition-colors">
+    <span className="text-sm text-gray-400 text-center px-2">
+      {value || 'Click to upload a file'}
+    </span>
+    <input
+      type="file"
+      className="hidden"
+      onChange={(e) => setValue(e.target.files[0]?.name || '')}
+    />
+  </label>
+)}
+
     </div>
   )
 }

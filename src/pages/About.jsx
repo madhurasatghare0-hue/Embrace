@@ -33,7 +33,7 @@ function About() {
     <div>
 
       {/* Page Header */}
-      <section className="bg-[#F5F0FA]/50 py-14 md:py-20">
+      <section className="py-14 md:py-20">
         <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
           <p className="text-xs font-semibold tracking-widest text-[#6B3FA0] uppercase mb-3">
             About Us
